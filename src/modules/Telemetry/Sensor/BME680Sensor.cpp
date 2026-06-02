@@ -34,6 +34,7 @@ bool BME680Sensor::initDevice(TwoWire *bus, ScanI2C::FoundDevice *dev)
 
     if (bme680.status == BSEC_OK) {
         status = 1;
+        bme680.setTemperatureOffset(BME680_TEMP_OFFSET);
         if (!bme680.setConfig(bsec_config)) {
             checkStatus("setConfig");
             status = 0;

@@ -15,6 +15,11 @@
 
 #define STATE_SAVE_PERIOD UINT32_C(360 * 60 * 1000) // That's 6 hours worth of millis()
 
+// Heat-source compensation passed to BSEC (degrees C of self-heating to subtract). Override per-variant in variant.h.
+#ifndef BME680_TEMP_OFFSET
+#define BME680_TEMP_OFFSET 5.0f
+#endif
+
 #if __has_include(<bsec2.h>)
 const uint8_t bsec_config[] = {
 #include "config/bme680/bme680_iaq_33v_3s_4d/bsec_iaq.txt"
