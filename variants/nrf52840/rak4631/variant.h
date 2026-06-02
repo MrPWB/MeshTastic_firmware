@@ -57,7 +57,8 @@ extern "C" {
  */
 
  // Hier Button1 Nummer anpassen, falls GPS-Modul im D-Slot verwendet werden soll. Ansonsten wird der PPS bei einem Fix nach ca. 5s einen Long-Press auslösen, was zu einem Shutdown führt
-#define PIN_BUTTON1 9 // Pin for button on E-ink button module or IO expansion
+//#define PIN_BUTTON1 9 // Pin for button on E-ink button module or IO expansion
+#define PIN_BUTTON1 31 // Pin for button on E-ink button module or IO expansion
 #define BUTTON_NEED_PULLUP
 #define PIN_BUTTON2 12
 
